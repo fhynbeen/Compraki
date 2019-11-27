@@ -35,7 +35,7 @@
     <h3 style="font-size: 25px; text-align: center; font-variant: small-caps;opacity: 0.7;"></h3>
     <div class="ui icon input" style="width: 95%; padding-left: 5%"></div>
 </div>
-<form class="ui form" method="post" action="CRUDprodutos.php?cadastro=cadastro" style="align-items: center; margin-left: 15%; margin-right: 15%">
+<form class="ui form" method="post" action="controladorGerente.php?action=cadastrar" style="align-items: center; margin-left: 15%; margin-right: 15%">
    <br>
     <div class="field">
         <label>Nome</label>

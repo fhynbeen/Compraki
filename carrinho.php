@@ -30,7 +30,7 @@
 
     <?php include "menuLogado.php";?>
 </div>
-
+<br>
 
 <div class="ui last container">
   <div class="ui three steps">

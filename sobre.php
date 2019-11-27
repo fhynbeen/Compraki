@@ -1,11 +1,9 @@
 <?php
-if ($_GET['sessao'] != "logado") {
-    $_GET['sessao'] = "deslogado";
-    $login = "Login";
-    $sobre = "deslogado";
-} else {
+if ($_GET['sessao'] == "Carrinho") {
     $login = "Carrinho";
-    $sobre = "logado";
+} else {
+    $login = "Login";
+
 }
 ?>
 <html>
@@ -178,7 +176,7 @@ if ($_GET['sessao'] != "logado") {
             Home
         </a>
 
-        <a class="item" href="<?= $login ?>.php" style="color: white">
+        <a class="item" href="<?= $login ?>.php?sessao=nao" style="color: white">
             <?= $login ?>
         </a>
         <a href="sobre.php" class=" active item" style="color: white;border-color: #ffffff;">
@@ -187,10 +185,6 @@ if ($_GET['sessao'] != "logado") {
 
     </div>
 </div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-
-<!-- Page Contents -->
 <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment" style="background-color: #f4511e;">
 

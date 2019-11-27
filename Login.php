@@ -29,7 +29,7 @@ function erroDeSenha()
                 Acesse ou Cadastre sua Conta
             </div>
         </h2>
-        <form class="ui large form" method="post" action="CRUDLogin.php">
+        <form class="ui large form" method="post" action="controladorLogin.php?action=login">
             <div class="ui stacked segment">
                 <?php
                 if ($_GET['sessao'] == "Digite_a_senha_corretamente") {

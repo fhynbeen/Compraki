@@ -34,7 +34,7 @@ class CRUDprodutos
 
     public function cadastrarProdutos($nome, $desc_prod, $preco, $qtd_emb, $categoria, $preco_unit)
     {
-        $inserir = $this->conexao->prepare('INSERT INTO cad_usuario (nome, desc_prod, preco, qtd_emb, categoria, preco_unit) values (:nome, :desc_prod,:preco, :qtd_emb, :categoria, :preco_unit)');
+        $inserir = $this->conexao->prepare('INSERT INTO produtos (nome, desc_prod, preco, qtd_emb, categoria, preco_unit) values (:nome, :desc_prod,:preco, :qtd_emb, :categoria, :preco_unit)');
         $inserir->execute(array(
             ':nome' => $nome,
             ':desc_prod' => $desc_prod,
@@ -43,6 +43,7 @@ class CRUDprodutos
             ':categoria' => $categoria,
             ':preco_unit' => $preco_unit
         ));
+        header("location: adcProdutos.php?action=cadastrar");
     }
 
     public function categoriaProduto($categoria)
@@ -69,7 +70,7 @@ class CRUDprodutos
     }
 }
 
-$crud = new CRUDprodutos();
+$crudProd = new CRUDprodutos();
 
 //$produto = $crud->categoriaProduto('Cozinha');
 //echo  $crud->buscaProduto("Cravo");

@@ -1,6 +1,6 @@
 <?php
 
-
+$login = "Login";
 if ($_GET['sessao'] != "logado") {
     $login = "Login";
 } else {
@@ -46,7 +46,7 @@ if ($_GET['sessao'] != "logado") {
             <a class="item" href="<?= $login ?>.php?sessao=nao" style="color: white">
                 <?= $login ?>
             </a>
-            <a href="sobre.php?sessao=<?= $sobre ?>" class="item" style="color: white">
+            <a href="sobre.php?sessao=<?= $login ?>" class="item" style="color: white">
                 Sobre Nós
             </a>
 
@@ -85,36 +85,36 @@ if ($_GET['sessao'] != "logado") {
         <div>&nbsp;</div>
         <div>&nbsp;</div>
 
-        <a href="produto.php?categoria=bebidas">
+        <a href="produto.php?categoria=bebidas&&sessao=<?= $login ?>">
             <button class="massive ui yellow button" style="width: 24%;height: 24%;">Bebidas</button>
         </a>
 
-        <a href="produto.php?categoria=açougue">
+        <a href="produto.php?categoria=açougue&&sessao=<?= $login ?>">
             <button class="massive ui red button" style="width: 24%;height: 24%;">Açougue</button>
         </a>
 
 
-        <a href="produto.php?categoria=comidas">
+        <a href="produto.php?categoria=comidas&&sessao=<?= $login ?>">
             <button class="massive ui orange button" style="width: 24%;height: 24%;">Comidas</button>
         </a>
 
 
-        <a href="produto.php?categoria=higiene">
+        <a href="produto.php?categoria=higiene&&sessao=<?= $login ?>">
             <button class="massive ui blue button" style="width: 24%;height: 24%;">Higiêne</button>
         </a>
 
 
         <div>&nbsp;</div>
-        <a href="produto.php?categoria=verdureira">
+        <a href="produto.php?categoria=verdureira&&sessao=<?= $login ?>">
             <button class="massive ui green button" style="width: 24%;height: 24%;">Verdureira</button>
         </a>
 
 
-        <a href="produto.php?categoria=frios">
+        <a href="produto.php?categoria=frios&&sessao=<?= $login ?>">
             <button class="massive ui teal button" style="width: 24%;height: 24%;">Frios</button>
         </a>
 
-        <a href="promocao.php"><button class="massive ui teal button" style="width: 24%;height: 24%;background-color: black;">Promoções</button></a>
+        <a href="promocao.php?sessao=<?= $login ?>"><button class="massive ui teal button" style="width: 24%;height: 24%;background-color: black;">Promoções</button></a>
 
         <div>&nbsp;</div>
         <div>&nbsp;</div>

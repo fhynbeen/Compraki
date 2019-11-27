@@ -22,7 +22,7 @@
                 Cadastre sua Conta
             </div>
         </h2>
-        <form class="ui large form" method="post" action="CRUDLogin.php">
+        <form class="ui large form" method="post" action="controladorLogin.php?action=cadastro">
             <div class="ui stacked segment">
                 <div class="field">
                     <div class="ui left icon input">

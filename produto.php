@@ -1,13 +1,21 @@
 <?php
 include("CRUDprodutos.php");
 
+if ($_GET['sessao'] != "logado") {
+    $login = "Login";
+} else {
+    $login = "Carrinho";
+
+}
+
+
 
 if ($_GET['categoria'] != "todos") {
-    $produtos = $crud->categoriaProduto($_GET['categoria']);
+    $produtos = $crudProd->categoriaProduto($_GET['categoria']);
 } elseif ($_GET['categoria'] == "todos") {
-    $produtos = $crud->lerProdutos();
+    $produtos = $crudProd->lerProdutos();
 } else {
-    $produtos = $crud->buscaProduto("Cravo");
+    $produtos = $crudProd->buscaProduto("Cravo");
 }
 //}else{
 
@@ -63,8 +71,24 @@ if ($_GET['categoria'] != "todos") {
     </div>
 </div>
 
-<?php require "menuLogado.php" ?>
+<div class="ui pointing fixed hidden menu" style=" display: flex !important;background-color: #f4511e;">
+    <a class="item" href="index.php">
+        <p style="font-size: 20px; color: white;">Compraki</p>
+    </a>
+    <div id="menuzinho" class="right menu" style="padding-right: 40px; ">
+        <a class="item"
+           style="border-color: #f4511e;background-color: #f4511e;border-bottom: 1px solid #f4511e;border-right: 1px solid #f4511e;color: white;">
+            Home
+        </a>
+        <a class="item" href="<?= $login ?>.php?sessao=nao" style="color: white">
+            <?= $login ?>
+        </a>
+        <a href="sobre.php?sessao=<?= $login ?>" class="item" style="color: white">
+            Sobre Nós
+        </a>
 
+    </div>
+</div>
 <form method="post" action="controlador.php?acao=carrinho">
     <div class="ui link cards" id="cards" style="margin-left: 3.7%;">
 

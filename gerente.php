@@ -115,7 +115,7 @@
         </table>
         <br>
 <div style="margin-left: 2%">
-    <a href="adcProdutos.php">
+    <a href="adcProdutos.php?action=cadastrar">
     <button class="ui green button"><i class=" plus icon"></i> Adicionar produto
     </button>
     </a>

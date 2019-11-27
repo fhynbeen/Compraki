@@ -16,7 +16,7 @@
         <p style="font-size: 20px; color: white;">Compraki</p>
     </a>
     <div id="menuzinho" class="right menu" style="background-color: #f4511e; padding-right: 40px; ">
-        <a class="active item" style="color: white; border-color: white;">
+        <a class="item" href="index.php?sessao=logado" style="color: white;">
             Home
         </a>
         <a class="item" href="carrinho.php" style="color: white;">

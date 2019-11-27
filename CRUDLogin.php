@@ -26,7 +26,10 @@ class CRUDLogin{
             $row = $consulta->fetch(PDO::FETCH_OBJ);
             if($row->nome != "") {
                 header("location: index.php?sessao=logado&&cpf=$cpf");
-            }else{
+            }elseif($row->tipuser_cd == 2){
+                header("location: index.php?sessao=gerente");
+            }
+            else{
                 header("location: Login.php?sessao=Digite_a_senha_corretamente");
             }
         }
@@ -47,7 +50,7 @@ class CRUDLogin{
             header("location: index.php?sessao=logado");
         }
         public function alterarUsuario($cpf, $rg, $nome, $email, $tel, $cel, $pwd){
-            $alterar = $this->conexao->prepare('UPDATE cad_usuario set cpf = :cpf and rg = :rg and nome = :nome and email = :email and tel = :tel and cel = :cel and pwd = :pwd where nome = :nome');
+            $alterar = $this->conexao->prepare('UPDATE cad_usuario set rg = :rg and nome = :nome and email = :email and tel = :tel and cel = :cel and pwd = :pwd where cpf = :cpf');
             $alterar->execute(array(
                 ':cpf' => $cpf,
                 ':rg' => $rg,
@@ -66,7 +69,7 @@ class CRUDLogin{
 
     }
         $crud = new CRUDLogin();
-        //echo $crud->cadastrarUsuario($_POST['cpf'], $_POST['rg'], $_POST['nome'], $_POST['email'], $_POST['tel'],$_POST['cel'],$_POST['pwd'], "1");
+       //echo $crud->cadastrarUsuario($_POST['cpf'], $_POST['rg'], $_POST['nome'], $_POST['email'], $_POST['tel'],$_POST['cel'],$_POST['pwd'], "1");
        // echo $crud->login($_POST['cpf'], $_POST['pwd']);
         //echo $crud->excluirUsuario($_POST['pwd']);
        // $cpf = $_POST['cpf'];

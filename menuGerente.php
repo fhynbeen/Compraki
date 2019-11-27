@@ -16,8 +16,8 @@
         <p style="font-size: 20px; color: white;">Compraki</p>
     </a>
     <div id="menuzinho" class="right menu" style="background-color: #f4511e; padding-right: 40px; ">
-        <a class="active item" style="color: white; border-color: white;">
-            Home
+        <a class="item" href="gerente.php" style="color: white; border-color: white;">
+            Gerenciar Produtos
         </a>
         <a class="item" href="index.php" style="color: white;">
             <i class="ui logout icon"></i>
